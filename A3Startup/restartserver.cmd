@@ -12,7 +12,7 @@ taskkill /f /fi "status eq not responding" /im arma3server.exe
 taskkill /f /im arma3server.exe
 timeout 1
 
-:: KILL BATTLEYE IF IT ISN'T ALREADY
+:: KILL BATTLEYE IF IT ISN'T STOPPED ALREADY
 taskkill /im Bec.exe
 timeout 1
 
@@ -29,7 +29,7 @@ echo Updates are copied
 cd /d C:\ServerHosting\A3Server\
 start "arma3" /realtime /affinity FF "arma3server.exe" -port=2302 "-config=C:\ServerHosting\A3Startup\A3Wasteland\config.cfg" "-cfg=C:\ServerHosting\A3Startup\A3Wasteland\basic.cfg" "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" -name=A3Wasteland -pid=a3_prod.pid -ranking=a3_prod_ranking.log "-mod=@ASM" -malloc=tbbmalloc -enableHT -cpuCount=2 -exThreads=1
 timeout 6
-echo ARMA 3 Server has started
+echo ARMA 3 Server is started
 
 ::RESTARTING ARMASERVERMONITOR
 cd /d C:\ServerHosting\A3Server\
@@ -42,22 +42,19 @@ set becpath="C:\ServerHosting\Bec\"
 cd /d %becpath%
 start "" "Bec.exe" -f Config.cfg
 timeout 3
-echo Battleye has started.. 
-echo.
-echo.
-echo Starting ARMA 3 Server...
+echo Battleye is started
 
 :: THIS RUNS THE SERVER MONITOR FOR YOU SO YOU DON'T FORGET
 set ServerMonitorPath="C:\ServerHosting\A3Startup\"
 cd /d %ServerMonitorPath%
-start "" "servermonitor.cmd"
-echo Server Monitor has started. Have Fun
+start "" /MIN "servermonitor.cmd"
+echo Server Monitor is started
 timeout 5
 
 :: THIS RUNS THE SERVER MONITOR FOR YOU SO YOU DON'T FORGET
 set BecMonitorPath="C:\ServerHosting\A3Startup\"
 cd /d %BecMonitorPath%
-start "" "becmonitor.cmd"
-echo Bec Monitor has started. Have Fun
+start "" /MIN "becmonitor.cmd"
+echo Bec Monitor is started
 timeout 5
-exit 
+exit
