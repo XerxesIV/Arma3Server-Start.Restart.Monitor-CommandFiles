@@ -27,7 +27,7 @@ echo Updates are copied
 
 ::RESTARTING THE ARMA 3 SERVER BE SURE TO EDIT THIS TO YOUR SERVER .EXE LOCATION -NOTE ALSO THIS IS WHERE YOU DEFINE WHERE YOU CONFIG.CFG IS
 cd /d C:\ServerHosting\A3Server\
-start "arma3" /realtime /affinity FF "arma3server.exe" -port=2302 "-config=C:\ServerHosting\A3Startup\A3Wasteland\config.cfg" "-cfg=C:\ServerHosting\A3Startup\A3Wasteland\basic.cfg" "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" -name=A3Wasteland -pid=a3_prod.pid -ranking=a3_prod_ranking.log "-mod=@ASM" -malloc=tbbmalloc -enableHT -cpuCount=2 -exThreads=1
+start "arma3" /realtime /affinity FF "arma3server.exe" -port=2302 "-config=C:\ServerHosting\A3Startup\A3Wasteland\config.cfg" "-cfg=C:\ServerHosting\A3Startup\A3Wasteland\basic.cfg" "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" -name=A3Wasteland -pid=a3_prod.pid -ranking=a3_prod_ranking.log "-mod=@ASM" -malloc=tbbmalloc -enableHT -cpuCount=4 -exThreads=7
 timeout 6
 echo ARMA 3 Server is started
 
