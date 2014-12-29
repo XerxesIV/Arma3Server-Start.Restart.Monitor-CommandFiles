@@ -143,235 +143,259 @@ SEE THE SCHEDULER_FAQ.txt for more info
 
 <Scheduler>
 
-<!-- this job will start after 30 minutes and run forever with a 30 minutes interval between the jobs -->
+<!-- this job will start after 60 minutes and run forever with a 30 minutes interval between the jobs -->
 <job id='0'>
 <day>1,2,3,4,5,6,7</day>
-<start>003000</start>
+<start>006000</start>
 <runtime>003000</runtime>
 <loop>-1</loop>
-<cmd>say -1 This server restarts at 06.00, 12.00, 18.00 and 24.00 hours CET - type !time in Global Chat to see the system time - type !upt in Global Chat to see server uptime</cmd>
+<cmd>say -1 This server restarts at 03.00, 09.00, 15.00 and 21.00 hours CET - type !time in Global Chat to see the system time - type !upt in Global Chat to see server uptime</cmd>
 </job>
 
-<!-- this job will start after 32 minutes and run forever with a 30 minutes interval between the jobs -->
+<!-- this job will start after 20 minutes and run forever with a 45 minutes interval between the jobs -->
 <job id='1'>
 <day>1,2,3,4,5,6,7</day>
-<start>003200</start>
-<runtime>003000</runtime>
+<start>002000</start>
+<runtime>004500</runtime>
 <loop>-1</loop>
-<cmd>say -1 Teamspeak: ts.nl-united.nl</cmd>
+<cmd>say -1 Teamspeak: ts.nl-united.nl -- Web and forum: http://www.nl-united.nl</cmd>
 </job>
 
-<!-- this job will start after 34 minutes and run forever with a 30 minutes interval between the jobs -->
+<!-- this job will start after 15 minutes and run forever with a 30 minutes interval between the jobs -->
 <job id='2'>
 <day>1,2,3,4,5,6,7</day>
-<start>003400</start>
+<start>001500</start>
 <runtime>003000</runtime>
 <loop>-1</loop>
-<cmd>say -1 Web and forum: http://www.nl-united.nl</cmd>
+<cmd>say -1 TIP: Cannot find the server in the server browser after a restart? Click remote and use smeekes.mooo.com as address and 2302 as port. Instant find :)</cmd>
 </job>
 
-<!-- This job wil make the server restart at 06:00 hours  -->
+<!-- This job wil make the server restart at 03:00 hours  -->
 <job id='3'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:00:00</start>
+<start>02:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN ONE HOUR</cmd>
 </job>
 <job id='4'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:30:00</start>
+<start>02:30:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 30 MINUTES -- RESTART IN 30 MINUTES</cmd>
 </job>
 <job id='5'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:50:00</start>
+<start>02:50:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 10 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='6'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:55:00</start>
+<start>02:55:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 5 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='7'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:58:00</start>
+<start>02:58:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 2 MINUTES - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='8'>
 <day>1,2,3,4,5,6,7</day>
-<start>05:59:00</start>
+<start>02:59:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 1 MINUTE - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='9'>
 <day>1,2,3,4,5,6,7</day>
-<start>06:00:00</start>
+<start>03:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>C:\ServerHosting\A3Startup\restartserver.cmd</cmd>
 </job>
 
-<!-- This job wil make the server restart at 12:00 hours  -->
+<!-- This job wil make the server restart at 09:00 hours  -->
 <job id='10'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:00:00</start>
+<start>08:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN ONE HOUR</cmd>
 </job>
 <job id='11'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:30:00</start>
+<start>08:30:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 30 MINUTES -- RESTART IN 30 MINUTES</cmd>
 </job>
 <job id='12'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:50:00</start>
+<start>08:50:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 10 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='13'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:55:00</start>
+<start>08:55:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 5 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='14'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:58:00</start>
+<start>08:58:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 2 MINUTES - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='15'>
 <day>1,2,3,4,5,6,7</day>
-<start>11:59:00</start>
+<start>08:59:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 1 MINUTE - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='16'>
 <day>1,2,3,4,5,6,7</day>
-<start>12:00:00</start>
+<start>09:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>C:\ServerHosting\A3Startup\restartserver.cmd</cmd>
 </job>
 
-<!-- This job wil make the server restart at 18:00 hours  -->
+<!-- This job wil make the server restart at 15:00 hours  -->
 <job id='17'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:00:00</start>
+<start>14:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN ONE HOUR</cmd>
 </job>
 <job id='18'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:30:00</start>
+<start>14:30:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 30 MINUTES -- RESTART IN 30 MINUTES</cmd>
 </job>
 <job id='19'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:50:00</start>
+<start>14:50:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 10 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='20'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:55:00</start>
+<start>14:55:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 5 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='21'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:58:00</start>
+<start>14:58:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 2 MINUTES - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='22'>
 <day>1,2,3,4,5,6,7</day>
-<start>17:59:00</start>
+<start>14:59:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 1 MINUTE - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='23'>
 <day>1,2,3,4,5,6,7</day>
-<start>18:00:00</start>
+<start>15:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>C:\ServerHosting\A3Startup\restartserver.cmd</cmd>
 </job>
 
-<!-- This job wil make the server restart at 00:00 hours  -->
+<!-- This job wil make the server restart at 21:00 hours  -->
 <job id='24'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:00:00</start>
+<start>20:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN ONE HOUR</cmd>
 </job>
 <job id='25'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:30:00</start>
+<start>20:30:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 30 MINUTES -- RESTART IN 30 MINUTES</cmd>
 </job>
 <job id='26'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:50:00</start>
+<start>20:50:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 10 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='27'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:55:00</start>
+<start>20:55:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 5 MINUTES - START PREPARING TO LOG OUT</cmd>
 </job>
 <job id='28'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:58:00</start>
+<start>20:58:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 2 MINUTES - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='29'>
 <day>1,2,3,4,5,6,7</day>
-<start>23:59:00</start>
+<start>20:59:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>say -1 RESTART IN 1 MINUTE - SAVE GEAR AND LOG OUT</cmd>
 </job>
 <job id='30'>
 <day>1,2,3,4,5,6,7</day>
-<start>00:00:00</start>
+<start>21:00:00</start>
 <runtime>000000</runtime>
 <loop>0</loop>
 <cmd>C:\ServerHosting\A3Startup\restartserver.cmd</cmd>
+</job>
+
+<job id='31'>
+<day>1,2,3,4,5,6,7</day>
+<start>001600</start>
+<runtime>003000</runtime>
+<loop>-1</loop>
+<cmd>say -1 TIP: You can use the Blastcore (Visual effects) and JSRS (Sounds) mods on our server!</cmd>
+</job>
+
+<job id='32'>
+<day>1,2,3,4,5,6,7</day>
+<start>001700</start>
+<runtime>003000</runtime>
+<loop>-1</loop>
+<cmd>say -1 DONATOR: We are thinking about adding donator bases, they will show up on the map soon. Let us know what you think.</cmd>
+</job>
+
+<job id='33'>
+<day>1,2,3,4,5,6,7</day>
+<start>001800</start>
+<runtime>003000</runtime>
+<loop>-1</loop>
+<cmd>say -1 NEW FEATURES: Resupplytruck, IPCamera's (savable), Spawnbeacon and IPcamera detector.</cmd>
 </job>
 
 </Scheduler>
