@@ -7,6 +7,11 @@ taskkill /f /im conhost.exe /fi "WINDOWTITLE eq Administrator:  becmonitor.cmd"
 echo Make sure all is clear
 timeout 1
 
+::KILL ARMA3 CLIENT
+taskkill /f /fi "status eq not responding" /im arma3client.exe
+taskkill /f /im arma3client.exe
+timeout 1
+
 ::MAKE SURE ALL TASKS ARE REALLY STOPPED
 taskkill /f /fi "status eq not responding" /im arma3server.exe
 taskkill /f /im arma3server.exe
@@ -27,7 +32,7 @@ echo Updates are copied
 
 ::RESTARTING THE ARMA 3 SERVER BE SURE TO EDIT THIS TO YOUR SERVER .EXE LOCATION -NOTE ALSO THIS IS WHERE YOU DEFINE WHERE YOU CONFIG.CFG IS
 cd /d C:\ServerHosting\A3Server\
-start "arma3" /realtime /affinity FF "arma3server.exe" -port=2302 "-config=C:\ServerHosting\A3Startup\A3Wasteland\config.cfg" "-cfg=C:\ServerHosting\A3Startup\A3Wasteland\basic.cfg" "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" -name=A3Wasteland -pid=a3_prod.pid -ranking=a3_prod_ranking.log "-mod=@ASM" -malloc=tbbmalloc -enableHT -cpuCount=4 -exThreads=7
+start "arma3" /realtime /affinity FF "arma3server.exe" -port=2302 "-config=C:\ServerHosting\A3Startup\A3Wasteland\config.cfg" "-cfg=C:\ServerHosting\A3Startup\A3Wasteland\basic.cfg" "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" "-BEPath=C:\ServerHosting\A3Startup\A3Wasteland\BattlEye" -name=A3Wasteland -pid=a3_prod.pid -ranking=a3_prod_ranking.log -malloc=fredmalloc -enableHT -cpuCount=4 -exThreads=7 -loadMissionToMemory -autoinit
 timeout 6
 echo ARMA 3 Server is started
 
@@ -57,4 +62,13 @@ cd /d %BecMonitorPath%
 start "" /MIN "becmonitor.cmd"
 echo Bec Monitor is started
 timeout 5
+
+::HEADLESS CLIENT
+echo STARTING HEADLESS CLIENT
+timeout 30
+cd /d C:\ServerHosting\A3Server\
+start "arma3headlessclient" /realtime /affinity FF "arma3client.exe" -client -connect=127.0.0.1 -port=2302 "-profiles=C:\ServerHosting\A3Startup\A3Wasteland" -name=headlessclient -malloc=fredmalloc -enableHT -cpuCount=4 -exThreads=7
+timeout 1
+echo Headless Client is started
+
 exit

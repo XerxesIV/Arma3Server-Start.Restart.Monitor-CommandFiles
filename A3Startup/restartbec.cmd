@@ -21,7 +21,7 @@ timeout 10
 :: THIS RUNS THE SERVER MONITOR FOR YOU SO YOU DON'T FORGET
 set BecMonitorPath="C:\ServerHosting\A3Startup\"
 cd /d %BecMonitorPath%
-start "" "becmonitor.cmd"
+start "" /MIN "becmonitor.cmd"
 echo Bec Monitor has started. Have Fun
 timeout 1
 exit

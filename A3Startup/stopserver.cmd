@@ -7,6 +7,14 @@ timeout 1
 taskkill /f /fi "status eq not responding" /im arma3server.exe
 taskkill /f /im arma3server.exe
 timeout 1
+::KILL ARMA3 CLIENT
+taskkill /f /fi "status eq not responding" /im arma3client.exe
+taskkill /f /im arma3client.exe
+timeout 1
+::DOUBLE CHECK KILL
+taskkill /f /fi "status eq not responding" /im arma3client.exe
+taskkill /f /im arma3client.exe
+timeout 1
 :: KILL BATTLEYE
 taskkill /im Bec.exe
 timeout 1
@@ -29,3 +37,8 @@ taskkill /f /im cmd.exe
 taskkill /f /fi "status eq not responding" /im conhost.exe
 taskkill /f /im conhost.exe
 timeout 1
+:: BACKUP DATABASE
+::start "BackupDB" "xcopy.exe" "E:\db" "D:\Serverhosting\Backup\db" /E /C /I /H /R /Y
+::start "BackupRamDisk" "xcopy.exe" "D:\Serverhosting\Ramdisk" "D:\Serverhosting\Backup\Ramdisk" /E /C /I /H /R /Y
+::timeout 3
+::echo The backup is made
